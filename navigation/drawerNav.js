@@ -3,7 +3,7 @@ import { createDrawerNavigator, createAppContainer } from 'react-navigation';
 
 import SideMenu from '../components/SideMenu/'
 
-import AppNav from './stackNav';
+import AppNav from './tabNav';
 
 const drawerNav = createDrawerNavigator({
     Item1: {

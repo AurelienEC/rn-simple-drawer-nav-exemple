@@ -19,7 +19,7 @@ class MainScreen extends Component {
             >
                 <IOSIcon name="ios-menu" size={30} />
                 </TouchableOpacity>),
-    headerStyle: { paddingRight: 10, paddingLeft: 30 }
+    headerStyle: {  }
 })
     render () {
         return (
@@ -35,7 +35,8 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        backgroundColor: 'grey',
     },
     menu_btn: {
         marginLeft: 20,
