@@ -14,8 +14,8 @@ import HomeButton from './homeButton'
 export default class CustomTabBar extends Component {
     navigationStateIndex = null;
 
-    buttonPress = (route, idx, currentIndex, navigation, label) => {
-        if (currentIndex != idx) {
+    buttonPress = (route, key, currentIndex, navigation, label) => {
+        if (currentIndex != key) {
             if (this.isNavigateAvaliable(label)) {
                 navigation.navigate(route.routeName);
             } else {
@@ -70,9 +70,10 @@ export default class CustomTabBar extends Component {
             return(
                 <HomeButton
                     onPress={() => this.buttonPress(route, idx, currentIndex, navigation, label) }
-                    key={route.routeName}
+                    referenceForKey={route.routeName}
                     route={route}
                     idx={idx}
+                    key={idx}
                     label={label}
                     tintColor={'white'}
                     icon={renderIcon({ route, tintColor: 'white', focused: currentIndex === idx, index: idx })}
@@ -83,9 +84,10 @@ export default class CustomTabBar extends Component {
         return (
             <TabBarButton
                 onPress={() => this.buttonPress(route, idx, currentIndex, navigation, label) }
-                key={route.routeName}
+                referenceForKey={route.routeName}
                 route={route}
                 idx={idx}
+                key={idx}
                 label={label}
                 icon={renderIcon({ route, tintColor: color, focused: currentIndex === idx, index: idx })}
                 style={styles.tab_btn}

@@ -10,13 +10,13 @@ import { TabBarBottomProps, NavigationRoute } from 'react-navigation';
 
 const TabBarButton = ({
             onPress,
-            key,
             icon,
+            idx,
             label
 }) => (
         <TouchableOpacity
             onPress = {() => onPress()}
-            key={key}
+            key={idx}
             style={styles.tab_btn}
         >
             <View style={styles.tab_icon} >

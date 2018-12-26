@@ -19,7 +19,7 @@ class MainScreen extends Component {
             >
                 <IOSIcon name="ios-menu" size={30} />
                 </TouchableOpacity>),
-    headerStyle: { paddingRight: 10, paddingLeft: 30 }
+    headerStyle: {  }
 })
     render () {
         return (

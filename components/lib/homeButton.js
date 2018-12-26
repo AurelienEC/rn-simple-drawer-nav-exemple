@@ -11,14 +11,14 @@ import { TabBarBottomProps, NavigationRoute } from 'react-navigation';
 import Ionicons from "react-native-vector-icons/Ionicons"
 
 const HomeButton = ({
-                          onPress,
-                          key,
-                          icon,
-                          label
+                        onPress,
+                        idx,
+                        icon,
+                        label
                       }) => (
     <TouchableWithoutFeedback
         onPress = {() => onPress()}
-        key={key}
+        key={idx}
         style={styles.tab_container}
     >
         <View style={styles.tab_btn}>
