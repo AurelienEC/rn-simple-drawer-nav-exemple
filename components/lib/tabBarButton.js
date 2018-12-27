@@ -9,6 +9,7 @@ import { TabBarBottomProps, NavigationRoute } from 'react-navigation';
 
 
 const TabBarButton = ({
+            selected,
             onPress,
             icon,
             idx,
@@ -22,7 +23,7 @@ const TabBarButton = ({
             <View style={styles.tab_icon} >
                     {icon}
             </View>
-            <Text >
+            <Text style={(selected) ? styles.selected_tab_label : styles.tab_label}>
                 {label}
             </Text>
         </TouchableOpacity>
@@ -33,10 +34,10 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
+        marginTop: 4
     },
-
-    tab_icon: {
-
-    },
+    selected_tab_label: {
+        color: 'green',
+    }
 
 });

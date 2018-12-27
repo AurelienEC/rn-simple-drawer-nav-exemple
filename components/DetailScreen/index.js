@@ -3,7 +3,8 @@ import {
     Text,
     View,
     ScrollView,
-    StyleSheet
+    StyleSheet,
+    SafeAreaView
 } from 'react-native';
 
 class DetailScreen extends Component {
@@ -12,7 +13,7 @@ class DetailScreen extends Component {
     })
     render () {
         return (
-            <View style={styles.container}>
+            <SafeAreaView style={styles.container}>
                 <ScrollView>
                     <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod, elit ac egestas luctus, tortor mi molestie eros, sit amet aliquam est lorem non mauris. Aliquam cursus auctor enim, in consequat orci luctus a. Nullam volutpat nibh ultricies sem ornare laoreet. Donec nec sapien laoreet, tincidunt lacus vitae, egestas ligula. Donec in ultrices lacus, a auctor risus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed in mattis ipsum. Aliquam feugiat sem at lectus mollis mollis. Cras ultrices porttitor ex non ultricies. Duis in nisl non ligula semper vehicula nec vitae nisl. Aliquam ac dictum quam. Quisque vel leo tempor, vehicula arcu sed, varius erat. Nunc ornare ante ipsum, et semper nulla imperdiet a. Phasellus non diam euismod, interdum velit sit amet, tempus lacus.
 
@@ -34,7 +35,7 @@ class DetailScreen extends Component {
 
                         Aliquam erat volutpat. Pellentesque viverra id sapien sit amet pharetra. Curabitur eu metus lobortis, tincidunt massa et, fringilla lorem. Pellentesque accumsan fringilla quam eget imperdiet. Nunc porta nisl eget tempor auctor. Aenean ut tortor dictum, pharetra quam eu, pretium erat. Maecenas sollicitudin ornare libero, at lacinia enim aliquet et. Fusce condimentum massa vel leo eleifend consectetur vitae eu leo. Morbi sit amet nibh leo. Vivamus id pretium neque. Maecenas hendrerit suscipit euismod.</Text>
                 </ScrollView>
-            </View>
+            </SafeAreaView>
         );
     }
 }

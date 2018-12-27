@@ -74,6 +74,7 @@ export default class CustomTabBar extends Component {
                     route={route}
                     idx={idx}
                     key={idx}
+                    selected={currentIndex === idx}
                     label={label}
                     tintColor={'white'}
                     icon={renderIcon({ route, tintColor: 'white', focused: currentIndex === idx, index: idx })}
@@ -86,6 +87,7 @@ export default class CustomTabBar extends Component {
                 onPress={() => this.buttonPress(route, idx, currentIndex, navigation, label) }
                 referenceForKey={route.routeName}
                 route={route}
+                selected={currentIndex === idx}
                 idx={idx}
                 key={idx}
                 label={label}
@@ -115,9 +117,9 @@ export default class CustomTabBar extends Component {
         const { navigation, style } = this.props;
         const tabBarButtons = navigation.state.routes.map(this.renderTabBarButton.bind(this));
         return (
-            <View style={styles.tab_container}>
+            <SafeAreaView style={styles.tab_container}>
                 {tabBarButtons}
-            </View>
+            </SafeAreaView>
         );
     }
 }
@@ -129,17 +131,3 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
     },
 });
-    /*
-    <TouchableOpacity
-                onPress={() => { this.buttonPress(route, idx)}}
-                key={route.routeName}
-                style={style}
-            >
-                <View style={icon_style} >
-                    {renderIcon({ route, tintColor: color, focused: currentIndex === idx, index: idx })}
-                </View>
-                { <Text >
-                    {label}
-                </Text>  }
-            </TouchableOpacity>
-     */
