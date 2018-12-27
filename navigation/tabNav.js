@@ -11,7 +11,7 @@ const tabNav = createBottomTabNavigator(
         Settings : DetailScreen,
         Other : DetailScreen,
         Home: stackNav,
-        Detail : DetailScreen,
+        Place : DetailScreen,
         Another : DetailScreen,
     },
     {
@@ -34,12 +34,12 @@ const tabNav = createBottomTabNavigator(
 
                 // You can return any component that you like here! We usually use an
                 // icon component from react-native-vector-icons
-                return <Ionicons name={iconName} size={25} color={tintColor} />;
+                return <Ionicons name={iconName} size={routeName === 'Home' ? 20 : 18} color={tintColor} />;
             },
         }),
         tabBarOptions: {
 
-            activeTintColor: 'tomato',
+            activeTintColor: 'green',
             inactiveTintColor: 'gray',
         },
     }
