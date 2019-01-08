@@ -25,7 +25,7 @@ class MainScreen extends Component {
         return (
             <SafeAreaView style={styles.container}>
                 <Text>Main</Text>
-                <Button onPress={() => this.props.navigation.navigate("Detail")} title="Detail Page" />
+                <Button onPress={() => this.props.navigation.navigate("Another")} title="Detail Page" />
             </SafeAreaView>
         );
     }

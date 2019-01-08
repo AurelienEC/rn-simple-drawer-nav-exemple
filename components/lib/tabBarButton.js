@@ -5,9 +5,6 @@ import {
     Text,
     StyleSheet
 } from 'react-native'
-import { TabBarBottomProps, NavigationRoute } from 'react-navigation';
-
-
 const TabBarButton = ({
             selected,
             onPress,
@@ -18,7 +15,7 @@ const TabBarButton = ({
         <TouchableOpacity
             onPress = {() => onPress()}
             key={idx}
-            style={styles.tab_btn}
+            style={idx < 4 ? styles.tab_btn : styles.tab_hidden}
         >
             <View style={styles.tab_icon} >
                     {icon}
@@ -38,6 +35,9 @@ const styles = StyleSheet.create({
     },
     selected_tab_label: {
         color: 'green',
+    },
+    tab_hidden : {
+        display: 'none',
     }
 
 });
